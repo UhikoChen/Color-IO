@@ -8,7 +8,7 @@
         <div class="color" :style="{ 'background-color': `#${color.hex}` }">
           <div class="del-btn" @click="onDelete(color)">×</div>
         </div>
-        <input class="colorHex" maxlength="6" v-model="color.hex" />
+        <input type="text" aria-label="ColorHex" class="colorHex" maxlength="6" v-model="color.hex"  />
       </li>
     </ul>
     <hr />
@@ -16,8 +16,8 @@
     <div class="sub-title">Input Color Hex To Add New Color :</div>
     <div class="wrapper">
       <span>#</span>
-      <input id="color-hex-input" type="text" maxlength="6" v-model="inputValue" />
-      <button @click="onCreateColor">Create</button>
+      <input id="color-hex-input" type="text" aria-label="ColorHexInput" maxlength="6" v-model="inputValue" />
+      <button type="button" @click="onCreateColor">Create</button>
     </div>
     <div class="footer-title">Powered by UhikoChen</div>
   </div>
@@ -75,7 +75,6 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   background-color: #f5f4f2;
-  color: #b7b4ad;
 }
 
 ul {
@@ -156,6 +155,10 @@ button {
   pointer-events: none;
 }
 
+.del-btn {
+  color: #b7b4ad;
+}
+
 @media (min-width: 1200px) {
   .del-btn {
     display: none;
@@ -191,7 +194,7 @@ button {
   padding: 20px 0;
   font-size: 12pt;
   text-align: center;
-  color: #b7b6b1;
+  color: #36352f;
   outline-style: none;
   border: 0px;
 }
